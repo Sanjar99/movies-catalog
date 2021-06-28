@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Movies catalog</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <main class="main">
+
+    <header class="py-3 mb-2 text-center">
+      <div class="container">
+        <h1 class="h3 mb-0">Movies catalog</h1>
+      </div>
+    </header>
+
+
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="container">
+            <section class="mb-4">
+              <h2 class="sr-only">Movie search form</h2>
+
+              <form class="js-search-form Form" action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
+                <div class="form-group">
+                  <input class="form-control js-search-form__title-input Name-search" type="search" name="title"
+                    placeholder="search..." aria-label="Title">
+                </div>
+
+                <div class="form-group">
+                  <input class="form-control js-search-form__rating-input searchRating" type="number" id="#searchRating"
+                    step="any" name="min_rating" placeholder="7.5" aria-label="rating">
+                </div>
+
+                <div class="form-group">
+                  <select class="form-control js-search-form__genre-select typeSelect" name="genre" aria-label="Genre">
+                    <option value="0" selected>All</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select class="form-control js-search-form__sort-select sortSelect" name="sort" aria-label="Sorting">
+                    <option value="0" selected>Rating (high to low)</option>
+                    <option value="1">Rating (low to high)</option>
+                    <option value="2">A-Z</option>
+                    <option value="3">Z-A</option>
+                    <option value="4">Year (new to old)</option>
+                    <option value="5">Year (old to new)</option>
+                  </select>
+                </div>
+
+                <button class="btn btn-primary btn-block Search" type="submit">Search</button>
+              </form>
+            </section>
+
+            <section class="mb-4">
+              <h2>Bookmarked movies</h2>
+              <ul class="bookmarked-movies list-group bookmarker-like">
+
+              </ul>
+            </section>
+          </div>
+        </div>
+
+
+        <section class="col-md-8">
+          <h2 class="h5 searchNumber">Search results</h2>
+          <div class="alert alert-info">Use the form on the left to search for a movie</div>
+          <div class="filmsWrapper"></div>
+
+        </section>
+      </div><!-- row -->
+    </div><!-- container -->
+
+  </main>
+
+
+  <!-- MODAL -->
+
+  <section class="movie-info-modal modal fade" id="movie-info-modal" tabindex="-1" aria-labelledby="movie-info-title"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="movie-info-modal__title h4 modal-title" id="movie-info-title"></h2>
+        </div>
+        <div>
+          <p class="modal-body"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./js/movies-new.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
